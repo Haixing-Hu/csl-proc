@@ -2,11 +2,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>com.github.haixinghu</groupId>
+		<groupId>com.github.haixing_hu</groupId>
 		<artifactId>pom-root</artifactId>
 		<version>1.0.0</version>
 	</parent>
-
 	<artifactId>csl-proc</artifactId>
 	<version>${csl-proc.version}</version>
 	<packaging>jar</packaging>
@@ -24,6 +23,10 @@
 		<dependency>
 			<groupId>xmlunit</groupId>
 			<artifactId>xmlunit</artifactId>
+		</dependency>
+                <dependency>
+			<groupId>org.simpleframework</groupId>
+			<artifactId>simple-xml</artifactId>
 		</dependency>
 	</dependencies>
 </project>
