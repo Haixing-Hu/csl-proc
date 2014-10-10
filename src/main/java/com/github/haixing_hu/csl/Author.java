@@ -40,7 +40,7 @@ import static com.github.haixing_hu.csl.util.Argument.requireNonNull;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement
 @XmlType(propOrder={"name", "email", "uri"})
-public class Author {
+public final class Author {
 
   @XmlElement(required=true)
   private String name;
@@ -66,10 +66,10 @@ public class Author {
    * @param name
    *    the name of the author.
    */
-  public Author(String name) {
+  public Author(final String name) {
     this.name = requireNonNull("name", name);
-    this.email = null;
-    this.uri = null;
+    email = null;
+    uri = null;
   }
 
   /**
@@ -78,12 +78,12 @@ public class Author {
    * @param name
    *    the name of the author.
    * @param email
-   *    the email of the author, which could be <code>null</code>.
+   *    the email of the author, which could be {@code null}.
    */
-  public Author(String name, @Nullable String email) {
+  public Author(final String name, @Nullable final String email) {
     this.name = requireNonNull("name", name);
     this.email = email;
-    this.uri = null;
+    uri = null;
   }
 
   /**
@@ -92,11 +92,12 @@ public class Author {
    * @param name
    *    the name of the author.
    * @param email
-   *    the email of the author, which could be <code>null</code>.
+   *    the email of the author, which could be {@code null}.
    * @param uri
-   *    the URI of the author, which could be <code>null</code>.
+   *    the URI of the author, which could be {@code null}.
    */
-  public Author(String name, @Nullable String email, @Nullable String uri) {
+  public Author(final String name, @Nullable final String email,
+      @Nullable final String uri) {
     this.name = requireNonNull("name", name);
     this.email = email;
     this.uri = uri;
@@ -117,7 +118,7 @@ public class Author {
    * @param name
    *          the new name to set.
    */
-  public void setName(String name) {
+  public void setName(final String name) {
     this.name = requireNonNull("name", name);
   }
 
@@ -134,9 +135,9 @@ public class Author {
    * Sets the email.
    *
    * @param email
-   *          the new email to set, which could be <code>null</code>.
+   *          the new email to set, which could be {@code null}.
    */
-  public void setEmail(@Nullable String email) {
+  public void setEmail(@Nullable final String email) {
     this.email = email;
   }
 
@@ -153,9 +154,9 @@ public class Author {
    * Sets the URI.
    *
    * @param uri
-   *          the new URI to set, which could be <code>null</code>.
+   *          the new URI to set, which could be {@code null}.
    */
-  public void setUri(@Nullable String uri) {
+  public void setUri(@Nullable final String uri) {
     this.uri = uri;
   }
 
@@ -165,7 +166,7 @@ public class Author {
   }
 
   @Override
-  public boolean equals(Object obj) {
+  public boolean equals(final Object obj) {
     return EqualsBuilder.reflectionEquals(this, obj);
   }
 

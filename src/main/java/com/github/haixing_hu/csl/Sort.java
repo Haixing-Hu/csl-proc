@@ -37,13 +37,13 @@ import org.apache.commons.lang.builder.ToStringBuilder;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement
-public class Sort {
+public final class Sort {
 
   @XmlElement(name = "key")
   private List<SortKey> keys;
 
   public Sort() {
-    this.keys = new ArrayList<SortKey>();
+    keys = new ArrayList<SortKey>();
   }
 
   /**
@@ -61,7 +61,7 @@ public class Sort {
    * @param keys
    *          the new keys to set.
    */
-  public void setKeys(List<SortKey> keys) {
+  public void setKeys(final List<SortKey> keys) {
     this.keys = keys;
   }
 
@@ -71,7 +71,7 @@ public class Sort {
   }
 
   @Override
-  public boolean equals(Object obj) {
+  public boolean equals(final Object obj) {
     return EqualsBuilder.reflectionEquals(this, obj);
   }
 

@@ -20,7 +20,7 @@
   @XmlJavaTypeAdapter(type=Date.class, value=DateXmlAdaptor.class),
   @XmlJavaTypeAdapter(type=CitationFormat.class, value=CitationFormatXmlAdapter.class),
   @XmlJavaTypeAdapter(type=Field.class, value=FieldXmlAdaptor.class),
-  @XmlJavaTypeAdapter(type=SortOrder.class, value=SortOrderXmlAdapter.class),
+  @XmlJavaTypeAdapter(type=SortDirection.class, value=SortDirectionXmlAdapter.class),
   @XmlJavaTypeAdapter(type=Variable.class, value=VariableXmlAdapter.class),
 })
 package com.github.haixing_hu.csl;

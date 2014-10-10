@@ -18,16 +18,17 @@
 
 package com.github.haixing_hu.csl;
 
-import com.github.haixing_hu.csl.util.EnumXmlAdapter;
+import javax.xml.bind.annotation.XmlEnum;
 
 /**
- * The JAXB data type adapter for the {@link SortOrder} enumeration.
+ * The enumeration of sorting directions.
  *
  * @author Haixing Hu
  */
-public final class SortOrderXmlAdapter extends EnumXmlAdapter<SortOrder> {
+@XmlEnum
+public enum SortDirection {
 
-  public SortOrderXmlAdapter() {
-    super(SortOrder.class);
-  }
+  ASCENDING,
+
+  DESCENDING,
 }

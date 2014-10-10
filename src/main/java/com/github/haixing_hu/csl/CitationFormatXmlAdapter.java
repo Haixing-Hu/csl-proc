@@ -25,7 +25,8 @@ import com.github.haixing_hu.csl.util.EnumXmlAdapter;
  *
  * @author Haixing Hu
  */
-public final class CitationFormatXmlAdapter extends EnumXmlAdapter<CitationFormat> {
+public final class CitationFormatXmlAdapter extends
+    EnumXmlAdapter<CitationFormat> {
 
   public CitationFormatXmlAdapter() {
     super(CitationFormat.class);

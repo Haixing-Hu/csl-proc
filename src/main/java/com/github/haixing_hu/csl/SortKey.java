@@ -35,7 +35,7 @@ import org.apache.commons.lang.builder.ToStringBuilder;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name="key")
-public class SortKey {
+public final class SortKey {
 
   @XmlAttribute
   private String variable;
@@ -44,7 +44,7 @@ public class SortKey {
   private String macro;
 
   @XmlAttribute
-  private SortOrder sort;
+  private SortDirection sort;
 
   @XmlAttribute(name = "names-min")
   private Integer namesMin;
@@ -79,7 +79,7 @@ public class SortKey {
    * @param variable
    *          the new variable to set.
    */
-  public void setVariable(@Nullable String variable) {
+  public void setVariable(@Nullable final String variable) {
     this.variable = variable;
   }
 
@@ -98,7 +98,7 @@ public class SortKey {
    * @param macro
    *          the new macro to set.
    */
-  public void setMacro(@Nullable String macro) {
+  public void setMacro(@Nullable final String macro) {
     this.macro = macro;
   }
 
@@ -107,7 +107,7 @@ public class SortKey {
    *
    * @return the sort.
    */
-  public SortOrder getSort() {
+  public SortDirection getSort() {
     return sort;
   }
 
@@ -117,7 +117,7 @@ public class SortKey {
    * @param sort
    *          the new sort to set.
    */
-  public void setSort(@Nullable SortOrder sort) {
+  public void setSort(@Nullable final SortDirection sort) {
     this.sort = sort;
   }
 
@@ -136,7 +136,7 @@ public class SortKey {
    * @param namesMin
    *          the new namesMin to set.
    */
-  public void setNamesMin(@Nullable Integer namesMin) {
+  public void setNamesMin(@Nullable final Integer namesMin) {
     this.namesMin = namesMin;
   }
 
@@ -155,7 +155,7 @@ public class SortKey {
    * @param namesUseFirst
    *          the new namesUseFirst to set.
    */
-  public void setNamesUseFirst(@Nullable Integer namesUseFirst) {
+  public void setNamesUseFirst(@Nullable final Integer namesUseFirst) {
     this.namesUseFirst = namesUseFirst;
   }
 
@@ -174,7 +174,7 @@ public class SortKey {
    * @param namesUseLast
    *          the new namesUseLast to set.
    */
-  public void setNamesUseLast(@Nullable Integer namesUseLast) {
+  public void setNamesUseLast(@Nullable final Integer namesUseLast) {
     this.namesUseLast = namesUseLast;
   }
 
@@ -184,7 +184,7 @@ public class SortKey {
   }
 
   @Override
-  public boolean equals(Object obj) {
+  public boolean equals(final Object obj) {
     return EqualsBuilder.reflectionEquals(this, obj);
   }
 

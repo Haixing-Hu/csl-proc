@@ -39,7 +39,7 @@ import static com.github.haixing_hu.csl.util.Argument.requireNonNull;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement
 @XmlType
-public class Category {
+public final class Category {
 
   @XmlAttribute(name="citation-format")
   private CitationFormat citationFormat;
@@ -52,13 +52,13 @@ public class Category {
     field = null;
   }
 
-  public Category(CitationFormat citationFormat) {
+  public Category(final CitationFormat citationFormat) {
     this.citationFormat = requireNonNull("citationFormat", citationFormat);
-    this.field = null;
+    field = null;
   }
 
-  public Category(Field field) {
-    this.citationFormat = null;
+  public Category(final Field field) {
+    citationFormat = null;
     this.field = requireNonNull("field", field);
   }
 
@@ -78,7 +78,7 @@ public class Category {
    * @param citationFormat
    *          the new citationFormat to set.
    */
-  public void setCitationFormat(@Nullable CitationFormat citationFormat) {
+  public void setCitationFormat(@Nullable final CitationFormat citationFormat) {
     this.citationFormat = citationFormat;
   }
 
@@ -97,7 +97,7 @@ public class Category {
    * @param field
    *          the new field to set.
    */
-  public void setField(@Nullable Field field) {
+  public void setField(@Nullable final Field field) {
     this.field = field;
   }
 
@@ -107,7 +107,7 @@ public class Category {
   }
 
   @Override
-  public boolean equals(Object obj) {
+  public boolean equals(final Object obj) {
     return EqualsBuilder.reflectionEquals(this, obj);
   }
 

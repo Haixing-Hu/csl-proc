@@ -43,7 +43,7 @@ import static com.github.haixing_hu.csl.util.Argument.requireNonNull;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement
 @XmlType
-public class Info {
+public final class Info {
 
   @XmlElement(required = true)
   private String title;
@@ -119,7 +119,7 @@ public class Info {
    * @param title
    *          the new title to set.
    */
-  public void setTitle(String title) {
+  public void setTitle(final String title) {
     this.title = requireNonNull("title", title);
   }
 
@@ -138,7 +138,7 @@ public class Info {
    * @param titleShort
    *          the new titleShort to set.
    */
-  public void setTitleShort(@Nullable String titleShort) {
+  public void setTitleShort(@Nullable final String titleShort) {
     this.titleShort = titleShort;
   }
 
@@ -157,7 +157,7 @@ public class Info {
    * @param id
    *          the new id to set.
    */
-  public void setId(String id) {
+  public void setId(final String id) {
     this.id = requireNonNull("id", id);
   }
 
@@ -176,7 +176,7 @@ public class Info {
    * @param summary
    *          the new summary to set.
    */
-  public void setSummary(@Nullable String summary) {
+  public void setSummary(@Nullable final String summary) {
     this.summary = summary;
   }
 
@@ -195,7 +195,7 @@ public class Info {
    * @param links
    *          the new links to set.
    */
-  public void setLinks(@Nullable List<Link> links) {
+  public void setLinks(@Nullable final List<Link> links) {
     this.links = links;
   }
 
@@ -214,7 +214,7 @@ public class Info {
    * @param authors
    *          the new authors to set.
    */
-  public void setAuthors(@Nullable List<Author> authors) {
+  public void setAuthors(@Nullable final List<Author> authors) {
     this.authors = authors;
   }
 
@@ -233,7 +233,7 @@ public class Info {
    * @param contributors
    *          the new contributors to set.
    */
-  public void setContributors(@Nullable List<Author> contributors) {
+  public void setContributors(@Nullable final List<Author> contributors) {
     this.contributors = contributors;
   }
 
@@ -252,7 +252,7 @@ public class Info {
    * @param categories
    *          the new categories to set.
    */
-  public void setCategories(@Nullable List<Category> categories) {
+  public void setCategories(@Nullable final List<Category> categories) {
     this.categories = categories;
   }
 
@@ -271,7 +271,7 @@ public class Info {
    * @param issns
    *          the new ISSNs to set.
    */
-  public void setIssns(@Nullable List<String> issns) {
+  public void setIssns(@Nullable final List<String> issns) {
     this.issns = issns;
   }
 
@@ -290,7 +290,7 @@ public class Info {
    * @param eissns
    *          the new EISSNs to set.
    */
-  public void setEissns(@Nullable List<String> eissns) {
+  public void setEissns(@Nullable final List<String> eissns) {
     this.eissns = eissns;
   }
 
@@ -309,7 +309,7 @@ public class Info {
    * @param issnls
    *          the new ISSNLs to set.
    */
-  public void setIssnls(@Nullable List<String> issnls) {
+  public void setIssnls(@Nullable final List<String> issnls) {
     this.issnls = issnls;
   }
 
@@ -328,7 +328,7 @@ public class Info {
    * @param rights
    *          the new rights to set.
    */
-  public void setRights(@Nullable Rights rights) {
+  public void setRights(@Nullable final Rights rights) {
     this.rights = rights;
   }
 
@@ -347,7 +347,7 @@ public class Info {
    * @param published
    *          the new published to set.
    */
-  public void setPublished(@Nullable Date published) {
+  public void setPublished(@Nullable final Date published) {
     this.published = published;
   }
 
@@ -366,7 +366,7 @@ public class Info {
    * @param updated
    *          the new updated to set.
    */
-  public void setUpdated(Date updated) {
+  public void setUpdated(final Date updated) {
     this.updated = requireNonNull("updated", updated);
   }
 
@@ -376,7 +376,7 @@ public class Info {
   }
 
   @Override
-  public boolean equals(Object obj) {
+  public boolean equals(final Object obj) {
     return EqualsBuilder.reflectionEquals(this, obj);
   }
 

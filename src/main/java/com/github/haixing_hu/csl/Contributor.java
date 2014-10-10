@@ -40,7 +40,7 @@ import static com.github.haixing_hu.csl.util.Argument.requireNonNull;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement
 @XmlType(propOrder={"name", "email", "uri"})
-public class Contributor {
+public final class Contributor {
 
   @XmlElement(required=true)
   private String name;
@@ -66,10 +66,10 @@ public class Contributor {
    * @param name
    *    the name of the contributor.
    */
-  public Contributor(String name) {
+  public Contributor(final String name) {
     this.name = requireNonNull("name", name);
-    this.email = null;
-    this.uri = null;
+    email = null;
+    uri = null;
   }
 
   /**
@@ -78,12 +78,12 @@ public class Contributor {
    * @param name
    *    the name of the contributor.
    * @param email
-   *    the email of the contributor, which could be <code>null</code>.
+   *    the email of the contributor, which could be {@code null}.
    */
-  public Contributor(String name, @Nullable String email) {
+  public Contributor(final String name, @Nullable final String email) {
     this.name = requireNonNull("name", name);
     this.email = email;
-    this.uri = null;
+    uri = null;
   }
 
   /**
@@ -92,11 +92,12 @@ public class Contributor {
    * @param name
    *    the name of the contributor.
    * @param email
-   *    the email of the contributor, which could be <code>null</code>.
+   *    the email of the contributor, which could be {@code null}.
    * @param uri
-   *    the URI of the contributor, which could be <code>null</code>.
+   *    the URI of the contributor, which could be {@code null}.
    */
-  public Contributor(String name, @Nullable String email, @Nullable String uri) {
+  public Contributor(final String name, @Nullable final String email,
+      @Nullable final String uri) {
     this.name = requireNonNull("name", name);
     this.email = email;
     this.uri = uri;
@@ -117,7 +118,7 @@ public class Contributor {
    * @param name
    *          the new name to set.
    */
-  public void setName(String name) {
+  public void setName(final String name) {
     this.name = requireNonNull("name", name);
   }
 
@@ -134,9 +135,9 @@ public class Contributor {
    * Sets the email.
    *
    * @param email
-   *          the new email to set, which could be <code>null</code>.
+   *          the new email to set, which could be {@code null}.
    */
-  public void setEmail(@Nullable String email) {
+  public void setEmail(@Nullable final String email) {
     this.email = email;
   }
 
@@ -153,9 +154,9 @@ public class Contributor {
    * Sets the URI.
    *
    * @param uri
-   *          the new URI to set, which could be <code>null</code>.
+   *          the new URI to set, which could be {@code null}.
    */
-  public void setUri(@Nullable String uri) {
+  public void setUri(@Nullable final String uri) {
     this.uri = uri;
   }
 
@@ -165,7 +166,7 @@ public class Contributor {
   }
 
   @Override
-  public boolean equals(Object obj) {
+  public boolean equals(final Object obj) {
     return EqualsBuilder.reflectionEquals(this, obj);
   }
 

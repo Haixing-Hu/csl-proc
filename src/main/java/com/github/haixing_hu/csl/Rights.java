@@ -70,7 +70,7 @@ public class Rights {
    * Constructs a {@link Rights} object.
    *
    * @param license
-   *    the license, which could be <code>null</code>.
+   *    the license, which could be {@code null}.
    * @param content
    *    the content.
    */
@@ -92,7 +92,7 @@ public class Rights {
    * Sets the license.
    *
    * @param license
-   *          the new license to set,  which could be <code>null</code>.
+   *          the new license to set,  which could be {@code null}.
    */
   public void setLicense(@Nullable String license) {
     this.license = license;

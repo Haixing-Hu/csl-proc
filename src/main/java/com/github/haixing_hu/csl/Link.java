@@ -39,7 +39,7 @@ import static com.github.haixing_hu.csl.util.Argument.requireNonNull;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement
 @XmlType(propOrder={"href", "rel"})
-public class Link {
+public final class Link {
 
   @XmlAttribute(required=true)
   private String href;
@@ -58,7 +58,7 @@ public class Link {
   /**
    * Constructs a {@link Link}.
    */
-  public Link(String href, String rel) {
+  public Link(final String href, final String rel) {
     this.href = requireNonNull("href", href);
     this.rel = requireNonNull("rel", rel);
   }
@@ -78,7 +78,7 @@ public class Link {
    * @param href
    *          the new href to set.
    */
-  public void setHref(String href) {
+  public void setHref(final String href) {
     this.href = requireNonNull("href", href);
   }
 
@@ -97,7 +97,7 @@ public class Link {
    * @param rel
    *          the new rel to set.
    */
-  public void setRel(String rel) {
+  public void setRel(final String rel) {
     this.rel = requireNonNull("rel", rel);
   }
 
@@ -107,7 +107,7 @@ public class Link {
   }
 
   @Override
-  public boolean equals(Object obj) {
+  public boolean equals(final Object obj) {
     return EqualsBuilder.reflectionEquals(this, obj);
   }
 
