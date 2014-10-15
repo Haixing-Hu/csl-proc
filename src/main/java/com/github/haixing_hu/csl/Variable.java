@@ -18,12 +18,15 @@
 
 package com.github.haixing_hu.csl;
 
-import static com.github.haixing_hu.csl.VariableType.*;
+import static com.github.haixing_hu.csl.DataType.DATE;
+import static com.github.haixing_hu.csl.DataType.INTEGER;
+import static com.github.haixing_hu.csl.DataType.NAME;
+import static com.github.haixing_hu.csl.DataType.STRING;
 
 /**
  * The enumeration of variables.
  *
- * @see <a href='http://citationstyles.org/downloads/specification.html#appendix-iv-variables'>Variables</a>
+ * @see <a href='http://citationstyles.org/downloads/specification.html#appendix-iv-variables'>CSL Variables</a>
  * @author Haixing Hu
  */
 public enum Variable {
@@ -422,9 +425,9 @@ public enum Variable {
   YEAR_SUFFIX("year-suffix", STRING);
 
   private final String name;
-  private final VariableType type;
+  private final DataType type;
 
-  private Variable(String name, VariableType type) {
+  private Variable(final String name, final DataType type) {
     this.name = name;
     this.type = type;
   }
@@ -443,7 +446,7 @@ public enum Variable {
    *
    * @return the data type of values of this variable.
    */
-  public VariableType getType() {
+  public DataType getType() {
     return type;
   }
 }

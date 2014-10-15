@@ -24,7 +24,7 @@ package com.github.haixing_hu.csl;
  * @see <a href='http://citationstyles.org/downloads/specification.html#appendix-iv-variables'>Variables</a>
  * @author Haixing Hu
  */
-public enum VariableType {
+public enum DataType {
 
   /**
    * Indicates the values of the variable are strings.

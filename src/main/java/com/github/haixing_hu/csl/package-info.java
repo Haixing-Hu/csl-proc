@@ -22,6 +22,7 @@
   @XmlJavaTypeAdapter(type=Field.class, value=FieldXmlAdaptor.class),
   @XmlJavaTypeAdapter(type=SortDirection.class, value=SortDirectionXmlAdapter.class),
   @XmlJavaTypeAdapter(type=Variable.class, value=VariableXmlAdapter.class),
+  @XmlJavaTypeAdapter(type=Type.class, value=TypeXmlAdapter.class),
 })
 package com.github.haixing_hu.csl;
 
